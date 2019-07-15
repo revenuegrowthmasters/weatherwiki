@@ -11,7 +11,7 @@ public class weatherMainMenu extends main {
 
     @Override
     protected String getTitle() {
-        return "Weather Wiki Main Menu";
+        return " TEST Weather Wiki Main Menu";
     }
     
 
