@@ -1,5 +1,6 @@
-import java.awt.MenuItem;
-import java.awt.Menu;
+package util;
+
+
 
 public class weatherMainMenu extends main {
 
@@ -7,7 +8,6 @@ public class weatherMainMenu extends main {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 
     @Override
     protected String getTitle() {
@@ -27,14 +27,13 @@ public class weatherMainMenu extends main {
      */
     @Override
     protected MenuItem[] getMenuItems() {
-        return new MenuItem[] {
+    	return new MenuItem[] {
                 new MenuItem('1', "Choose Continent"),
                 new MenuItem('2', "Import Data into the Wiki"),
                 new MenuItem('3', "Export Data to file from Wiki"),
                 new MenuItem('H', "Help Menu"),
-                new MenuItem("Quit Program")
-              
-        };
+                new MenuItem('Q', "Quit Program")
+           };
     }
     
     
