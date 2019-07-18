@@ -11,18 +11,24 @@ package util;
 
 
 public class weatherMainMenu extends main {
-
+    /*
+     * Default constructor for weatherMainMenu.
+     */
 	public weatherMainMenu() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
-    //method to display Menu Title
+    /*
+     * This method provides the title for the Weather Main Menu.
+     */
     @Override
     protected String getTitle() {
         return "Weather Wiki Main Menu";
     }
     
-    //method to display Menu Description
+    /*
+     * This method provides the description for the Weather Main Menu.
+     */
     @Override
     protected String getDescription() {
         return "Welcome to the Startup Weather Wiki.  Your source for researching historical weather"
@@ -30,7 +36,7 @@ public class weatherMainMenu extends main {
     }
     
     /**
-     * Provide the list of menu items.
+     * Provide the list of menu items for the user to select.
      * @return
      */
     @Override
@@ -55,25 +61,24 @@ public class weatherMainMenu extends main {
         
         
         switch (Character.toUpperCase(key)) {
+            //case 1 will create a Continents Object that will contain the northAmerica menu.
             case '1': 
             	Menu northAmerica = new Continents();
             	northAmerica.display();
                 break;
+           
+            //case 2 will create a Continents Object that will contain the southAmerica menu.
             case '2':
             	Menu southAmerica = new Continents();
             	southAmerica.display();
                 break;
 				
-            case '3':
-            	Menu europe = new europe();
-            	europe.display();
-                break;
-                
+             //case H will display a series of frequently asked questions to inform the user. 
             case 'H':
                 Menu helpMenu = new helpMenu();
                 helpMenu.display();
                 break;
-                
+              //case Q will return false and exit.
             case 'Q':
                 return false;
                 
