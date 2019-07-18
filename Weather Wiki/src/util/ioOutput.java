@@ -14,7 +14,7 @@ public class ioOutput {
             /**
              * Change the string to the actual output needed to write to file.
              */
-            fwo.write(String.format("Change string to print output",name));
+            fwo.write(String.format("variable + scanner entry",name));
 
             fwo.close();
         } catch (IOException ex) {

@@ -1,3 +1,12 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * ioInput Class
+ * IMPORTANT: reference test class only
+ */
+
 package util;
 import java.io.File;
 import java.io.FileReader;

@@ -1,3 +1,11 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * MenuItem Class 
+ * Triggers logic for Menu Items
+ */
 package util;
 
 public class MenuItem {

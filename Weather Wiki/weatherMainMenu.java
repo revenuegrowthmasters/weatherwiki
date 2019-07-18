@@ -1,3 +1,11 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * WeatherMainMenu
+ * Initial Menu Class
+ */
 package util;
 
 

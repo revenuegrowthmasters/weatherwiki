@@ -1,3 +1,11 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * main Class
+ * DEFINITION: Main class that executes application
+ */
 package util;
 import java.util.Scanner;
 

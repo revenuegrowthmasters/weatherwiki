@@ -1,4 +1,11 @@
-package util;
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * helpMenu Class
+ * IMPORTANT: Class will not be used, built class as a test example only
+ */package util;
 
 
 
