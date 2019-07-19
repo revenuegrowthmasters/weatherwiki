@@ -9,8 +9,11 @@
 
 package util;
 
-public class Blizzard extends WeatherTypes {
+
+public class Blizzard extends Continents {
 //try this
 }
 
-
+/*
+ * Once completed, this class will create an array of information that will work with the
+ * input/output operations of the class and application.

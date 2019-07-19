@@ -8,6 +8,9 @@
  */
 package util;
 
-public class Hurricane extends WeatherTypes {
+public class Hurricane extends Continents {
 //try this
 }
+/*
+ * Once completed, this class will create an array of information that will work with the
+ * input/output operations of the class and application.

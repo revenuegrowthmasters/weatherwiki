@@ -11,8 +11,7 @@ import java.util.Scanner;
 
 
 /**
- * Weather Wiki
- * Code by Bradley Trede & William Nathanial Markham Brown
+ * 
  *
  */
 public class main {

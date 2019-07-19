@@ -6,14 +6,18 @@
  * ioInput Class
  * IMPORTANT: reference test class only
  */
-
+/*
+ * 
+ */
 package util;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.BufferedReader;
 
-
+/*
+ * This class is for informational purposes and testing only. This class will eventually be removed.
+ */
 public class ioInput {
 
 	public ioInput() {

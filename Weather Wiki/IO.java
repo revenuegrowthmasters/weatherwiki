@@ -22,5 +22,8 @@ public class IO implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
+	/*
+	 * Once completed, this class will create the functionality for the input/output constructors and 
+	 * methods.
+	 */
 }

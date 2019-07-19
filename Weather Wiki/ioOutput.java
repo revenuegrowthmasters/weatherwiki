@@ -10,7 +10,9 @@ package util;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-	
+	/*
+	 * This class is for informational purposes and testing only. This class will eventually be removed.
+	 */
 public class ioOutput {
 	public static void main(String[] args) {
         String name = "Weather Wiki";
