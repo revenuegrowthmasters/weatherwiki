@@ -1,16 +1,38 @@
-/*
- * Startup Weather Wiki
- * CIT260 Final Project
- * @author Bradley Trede
- * @author William Nathanial Markham Brown
- * Hurricane Class
- * Definition: Weather type child class
- */
 package util;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
+import java.io.Serializable;
 
-public class Hurricane extends NorthAmerica {
-//try this
+public class Hurricane extends NorthAmerica implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+private String Info;
+	
+	public Hurricane(String Info) {
+		this.Info = Info;
+		
+	}
+	
+	@Override
+	public String getBlurb() {
+		return this.Info;
+	}
+
+	@Override
+	public String getContent() {
+		return this.Info;
+	}
+
+
+	public String toString() {
+		return this.Info;
+	}
+
 }
-/*
- * Once completed, this class will create an array of information that will work with the
- * input/output operations of the class and application.

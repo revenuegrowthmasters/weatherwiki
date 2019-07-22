@@ -1,19 +1,40 @@
-/*
- * Startup Weather Wiki
- * CIT260 Final Project
- * @author Bradley Trede
- * @author William Nathanial Markham Brown
- * Blizzard Class
- * Definition: Weather type child class
- */
-
 package util;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+import java.io.*;
+import java.util.ArrayList;
+import java.io.Serializable;
+
+public class Blizzard extends NorthAmerica implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String Info, Attribute;
+	
+	public Blizzard(String Info, String Attribute) {
+		this.Info = Info;
+		this.Attribute = Attribute;
+	}
+	
 
 
-public class Blizzard extends NorthAmerica {
-//try this
+	@Override
+	public String getContent() {
+		return this.Info;
+	}
+
+	@Override
+	public String getAttribute() {
+		return this.Attribute;
+	}
+	
+	public String toString() {
+		return this.Info+ "  -- " + this.Attribute;
+	}
+
+
 }
-
-/*
- * Once completed, this class will create an array of information that will work with the
- * input/output operations of the class and application.

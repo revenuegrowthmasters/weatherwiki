@@ -53,8 +53,10 @@ public class weatherMainMenu extends main {
     @Override
     protected MenuItem[] getMenuItems() {
     	return new MenuItem[] {
-                new MenuItem('1', "North America"),
-                new MenuItem('2', "South America"),
+                new MenuItem('1', "Read Blizzard Info"),
+                new MenuItem('2', "Add Blizzard Info"),
+                new MenuItem('3', "Read Hurricane Info"),
+                new MenuItem('4', "Add Hurricane Info"),
                 new MenuItem('H', "Help FAQ"),
                 new MenuItem('Q', "Quit Program")
            };
@@ -74,12 +76,19 @@ public class weatherMainMenu extends main {
         switch (Character.toUpperCase(key)) {
             //case 1 will create a Continents Object that will contain the northAmerica menu.
             case '1': 
-            	Menu northAmerica = new Continents();
+            	Menu northAmerica = new NorthAmerica();
             	northAmerica.display();
                 break;
            
             //case 2 will create a Continents Object that will contain the southAmerica menu.
             case '2':
+            	System.out.println("This is where you can submit Blizzard Information");
+				String newBlizzardInfo = this.prompt("Please enter your information");
+				String newBlizzardAttrib = "Blizzard";
+				Blizzard bz = new Blizzard(newBlizzardInfo, newBlizzardAttrib);
+				b.addInfo(bz);
+            	
+            
             	Menu southAmerica = new Continents();
             	southAmerica.display();
                 break;
