@@ -8,7 +8,7 @@
  */
 package util;
 
-public class Hurricane extends Continents {
+public class Hurricane extends NorthAmerica {
 //try this
 }
 /*

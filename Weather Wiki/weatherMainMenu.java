@@ -11,13 +11,24 @@ package util;
 
 
 public class weatherMainMenu extends main {
-    /*
-     * Default constructor for weatherMainMenu.
-     */
+    
+	private Blizzard b;
+	private Hurricane h;
 	public weatherMainMenu() {
 		super();
-		
 	}
+	
+	public weatherMainMenu(Blizzard passed_b) {
+		super();
+		this.b = passed_b;
+	}
+	
+	public weatherMainMenu(Hurricane passed_h) {
+		super();
+		this.h = passed_h;
+	}
+	
+	
     /*
      * This method provides the title for the Weather Main Menu.
      */

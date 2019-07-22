@@ -10,7 +10,7 @@
 package util;
 
 
-public class Blizzard extends Continents {
+public class Blizzard extends NorthAmerica {
 //try this
 }
 
