@@ -1,37 +1,61 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * WeatherMainMenu
+ * Initial Menu Class
+ */
 package util;
 
 
 
 public class weatherMainMenu extends main {
-
+    
+	private Blizzard b;
+	private Hurricane h;
 	public weatherMainMenu() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
-
+	
+	public weatherMainMenu(Blizzard passed_b) {
+		super();
+		this.b = passed_b;
+	}
+	
+	public weatherMainMenu(Hurricane passed_h) {
+		super();
+		this.h = passed_h;
+	}
+	
+	
+    /*
+     * This method provides the title for the Weather Main Menu.
+     */
     @Override
     protected String getTitle() {
-        return " TEST Weather Wiki Main Menu";
+        return "Weather Wiki Main Menu";
     }
     
-
+    /*
+     * This method provides the description for the Weather Main Menu.
+     */
     @Override
     protected String getDescription() {
-        return "Welcome to the Weather Wiki.  Your source for researching historical weather"
-        		+ "conditions by type and continent. Please select your entry to begin:";
+        return "Welcome to the Startup Weather Wiki.  Your source for researching historical weather"
+        		+ "conditions by type and continent. Please select the continent to begin:";
     }
     
     /**
-     * Provide the list of menu items.
+     * Provide the list of menu items for the user to select.
      * @return
      */
     @Override
     protected MenuItem[] getMenuItems() {
     	return new MenuItem[] {
-                new MenuItem('1', "Choose Continent"),
-                new MenuItem('2', "Import Data into the Wiki"),
-                new MenuItem('3', "Export Data to file from Wiki"),
-                new MenuItem('H', "Help Menu"),
+                new MenuItem('1', "North America"),
+                new MenuItem('2', "South America"),
+                new MenuItem('H', "Help FAQ"),
                 new MenuItem('Q', "Quit Program")
            };
     }
@@ -48,21 +72,24 @@ public class weatherMainMenu extends main {
         
         
         switch (Character.toUpperCase(key)) {
+            //case 1 will create a Continents Object that will contain the northAmerica menu.
             case '1': 
-                System.out.println("");
+            	Menu northAmerica = new Continents();
+            	northAmerica.display();
                 break;
+           
+            //case 2 will create a Continents Object that will contain the southAmerica menu.
             case '2':
-                System.out.println("You typed 2");
+            	Menu southAmerica = new Continents();
+            	southAmerica.display();
                 break;
-            case '3':
-                System.out.println("You typed 3");
-                break;
-                
+				
+             //case H will display a series of frequently asked questions to inform the user. 
             case 'H':
-                Menu helpMenu = new HelpMenu();
+                Menu helpMenu = new helpMenu();
                 helpMenu.display();
                 break;
-                
+              //case Q will return false and exit.
             case 'Q':
                 return false;
                 

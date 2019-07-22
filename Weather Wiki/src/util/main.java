@@ -1,10 +1,17 @@
+/*
+ * Startup Weather Wiki
+ * CIT260 Final Project
+ * @author Bradley Trede
+ * @author William Nathanial Markham Brown
+ * main Class
+ * DEFINITION: Main class that executes application
+ */
 package util;
 import java.util.Scanner;
 
 
 /**
- * Weather Wiki
- * Code by Bradley Trede & William Nathanial Markham Brown
+ * 
  *
  */
 public class main {
@@ -21,24 +28,27 @@ public class main {
        
         
 
-
+             //getter method for the title
 	protected String getTitle() {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+            //getter method for the description
 	protected String getDescription() {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	      //getter method for the list of menu iems
 	protected MenuItem[] getMenuItems() {
 		// TODO Auto-generated method stub
 		return new MenuItem[] {};
 	}
-
+       //method for handling the menu selection
 	 protected boolean handleMenuSelection(char key) {
 	        return false;
 	    }
+	//method for displaying the item menu and allowing the user to select menu items while preventing user caused errors
+	 // such as inputting an invalid key
 	 public void display() {
 	        
 	        boolean keepGoing = true;
@@ -64,7 +74,7 @@ public class main {
 	                System.out.println("Programmer error. Who designs a menu with no options?!");
 	                break;
 	            }
-	            
+	            // a for each loop to loop through the menuItems array
 	            for (MenuItem item : menuItems) {
 	                System.out.printf("%c - %s%n", item.getKey(), item.getText());
 	            }
