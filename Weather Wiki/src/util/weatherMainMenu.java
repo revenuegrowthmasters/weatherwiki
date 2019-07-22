@@ -8,25 +8,23 @@
  */
 package util;
 
-
+import util.main;
+import util.MenuItem;
 
 public class weatherMainMenu extends main {
     
-	private Blizzard b;
-	private Hurricane h;
+	private IO b;
+
 	public weatherMainMenu() {
 		super();
 	}
 	
-	public weatherMainMenu(Blizzard passed_b) {
+	public weatherMainMenu(IO passed_b) {
 		super();
 		this.b = passed_b;
 	}
 	
-	public weatherMainMenu(Hurricane passed_h) {
-		super();
-		this.h = passed_h;
-	}
+
 	
 	
     /*
@@ -57,6 +55,7 @@ public class weatherMainMenu extends main {
                 new MenuItem('2', "Add Blizzard Info"),
                 new MenuItem('3', "Read Hurricane Info"),
                 new MenuItem('4', "Add Hurricane Info"),
+                new MenuItem('S', "Save"),
                 new MenuItem('H', "Help FAQ"),
                 new MenuItem('Q', "Quit Program")
            };
@@ -76,10 +75,11 @@ public class weatherMainMenu extends main {
         switch (Character.toUpperCase(key)) {
             //case 1 will create a Continents Object that will contain the northAmerica menu.
             case '1': 
-            	Menu northAmerica = new NorthAmerica();
-            	northAmerica.display();
-                break;
-           
+            	
+            	System.out.println("Learn about Blizzards");
+				b.getAllInfo();
+				break;    
+				
             //case 2 will create a Continents Object that will contain the southAmerica menu. test
             case '2':
             	System.out.println("This is where you can submit Blizzard Information");
@@ -87,17 +87,35 @@ public class weatherMainMenu extends main {
 				String newBlizzardAttrib = "Blizzard";
 				Blizzard bz = new Blizzard(newBlizzardInfo, newBlizzardAttrib);
 				b.addInfo(bz);
+				break;
+				
+        case '3': 
             	
-            
-            	Menu southAmerica = new Continents();
-            	southAmerica.display();
-                break;
+            	System.out.println("Learn about Hurricanes");
+				b.displayInfo();
+				break;    
+				
+            //case 2 will create a Continents Object that will contain the southAmerica menu. test
+            case '4':
+            	System.out.println("This is where you can submit Hurricane Information");
+				String newHurricaneInfo = this.prompt("Please enter your information");
+				String newHurricaneAttrib = "Hurricane";
+				Hurricane hn = new Hurricane(newHurricaneInfo, newHurricaneAttrib);
+				b.addInfo(hn);
+				break;
+				
+        	case 'S':
+				b.writeToFile();
+				System.out.println("Your entry has been added");
+				break;
 				
              //case H will display a series of frequently asked questions to inform the user. 
             case 'H':
-                Menu helpMenu = new helpMenu();
+                main helpMenu = new helpMenu();
                 helpMenu.display();
                 break;
+                
+                
               //case Q will return false and exit.
             case 'Q':
                 return false;

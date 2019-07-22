@@ -13,26 +13,28 @@ public class Hurricane extends NorthAmerica implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-private String Info;
-	
-	public Hurricane(String Info) {
-		this.Info = Info;
-		
-	}
-	
-	@Override
-	public String getBlurb() {
-		return this.Info;
-	}
+private String Info, Attribute;
 
-	@Override
-	public String getContent() {
-		return this.Info;
-	}
+public Hurricane(String Info, String Attribute) {
+	this.Info = Info;
+	this.Attribute = Attribute;
+}
 
 
-	public String toString() {
-		return this.Info;
-	}
+
+@Override
+public String getContent() {
+	return this.Info;
+}
+
+@Override
+public String getAttribute() {
+	return this.Attribute;
+}
+
+public String toString() {
+	return this.Info+ "  -- " + this.Attribute;
+}
+
 
 }

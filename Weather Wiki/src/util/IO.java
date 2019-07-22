@@ -25,9 +25,11 @@ public class IO implements Serializable {
 
 		private ArrayList<NorthAmerica> database;
 
+		private static String Attribute;
 		IO(){
 			database = new ArrayList<NorthAmerica>();
 		}
+		
 		
 		public void addInfo(NorthAmerica object) {
 			database.add(object);
@@ -42,22 +44,30 @@ public class IO implements Serializable {
 
 		}
 		
-		public ArrayList<NorthAmerica> getAllInspiration() {
+		public ArrayList<NorthAmerica> getAllInfo() {
 			return this.database;
 		}
 		
 		// Two separate databases for nomalization
 		public void writeToFile() {
 	        try {
-	        	 // if attriub='Blizzard' Then
-	            FileOutputStream fileOut = new FileOutputStream("Database.db");
+	        	if (Attribute == "Blizzard") {
+	            FileOutputStream fileOut = new FileOutputStream("BlizzardDatabase.db");
 	            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-	            
-	            //Elseif weatherType=HUrricane then
-	            
 	            objectOut.writeObject(this);
 	            objectOut.close();
 	            System.out.println("The input object was successful in writing to a file");
+	        	}
+	            else {
+	            	if (Attribute == "Hurricane") {
+	    	            FileOutputStream fileOut = new FileOutputStream("HurricaneDatabase.db");
+	    	            ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+	    	            objectOut.writeObject(this);
+	    	            objectOut.close();
+	    	            System.out.println("The input object was successful in writing to a file");
+	            	}
+	            }
+	            
 	   
 	         } catch (Exception ex) {
 	             ex.printStackTrace();
@@ -66,10 +76,17 @@ public class IO implements Serializable {
 		
 		public static IO readFromFile() {
 			try {
-				FileInputStream filein = new FileInputStream("Database.db");
+				if (Attribute == "Blizzard") {
+				FileInputStream filein = new FileInputStream("BlizzardDatabase.db");
 				ObjectInputStream objectin = new ObjectInputStream(filein);
 				return (IO)objectin.readObject();
-				
+				}
+	            else 
+	            	if (Attribute == "Hurricane") {
+	            		FileInputStream filein = new FileInputStream("HurricaneDatabase.db");
+	    				ObjectInputStream objectin = new ObjectInputStream(filein);
+	    				return (IO)objectin.readObject();
+	            	}
 			}
 			catch (Exception ex) {
 	            ex.printStackTrace();
