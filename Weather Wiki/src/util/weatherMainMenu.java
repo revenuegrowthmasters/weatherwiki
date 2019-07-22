@@ -80,7 +80,7 @@ public class weatherMainMenu extends main {
             	northAmerica.display();
                 break;
            
-            //case 2 will create a Continents Object that will contain the southAmerica menu.
+            //case 2 will create a Continents Object that will contain the southAmerica menu. test
             case '2':
             	System.out.println("This is where you can submit Blizzard Information");
 				String newBlizzardInfo = this.prompt("Please enter your information");
